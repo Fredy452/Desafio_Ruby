@@ -1,6 +1,6 @@
-%h1 Listing products
+%h1 lista de productos
 
-%table
+%table.table.table-dark.table-striped-columns
   %thead
     %tr
       %th Image
@@ -13,7 +13,7 @@
   %tbody
     - @products.each do |product|
       %tr
-        %td= image_tag(product.image)
+        %td= link_to image_tag(product.image, style:"width:50px; heigth:50px"), product.image
         %td= product.title
         %td= product.description
         %td= link_to 'Show', product
@@ -21,5 +21,4 @@
         %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
-
-= link_to 'New Product', new_product_path
+%button.btn.btn-success= link_to 'New Product', new_product_path

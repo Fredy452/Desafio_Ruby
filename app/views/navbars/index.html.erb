@@ -1,14 +1,29 @@
-<p style="color: green"><%= notice %></p>
+<h1>Lista de Url</h1>
 
-<h1>Navbars</h1>
+<table class="table table-dark table-striped-columns">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Label</th>
+      <th scope="col">URl</th>
+      <th colspan="3" scope="col">Accion</th>
+    </tr>
+  </thead>
 
-<div id="navbars">
-  <% @navbars.each do |navbar| %>
-    <%= render navbar %>
-    <p>
-      <%= link_to "Show this navbar", navbar %>
-    </p>
-  <% end %>
-</div>
+  <tbody>
+    <% @navbars.each do |navbar| %>
+      <tr>
+        <td scope="row"><%= navbar.id %></td>
+        <td scope="row"><%= navbar.label %></td>
+        <td scope="row"><%= navbar.url %></td>
+        <td scope="row"><%= link_to "Show", navbar %></td>
+        <td scope="row"><%= link_to "Edit", edit_post_path(navbar) %></td>
+        <td scope="row"><%= link_to "Destroy", navbar, data: { turbo_method: :delete, turbo_confirm: "Estas seguro?" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New navbar", new_navbar_path %>
+<br>
+
+<%= link_to  "Agregar nuevo posts", new_navbar_path %>
