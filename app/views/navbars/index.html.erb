@@ -17,7 +17,7 @@
         <td scope="row"><%= navbar.label %></td>
         <td scope="row"><%= navbar.url %></td>
         <td scope="row"><%= link_to "Show", navbar %></td>
-        <td scope="row"><%= link_to "Edit", edit_post_path(navbar) %></td>
+        <td scope="row"><%= link_to "Edit", edit_navbar_path(navbar) %></td>
         <td scope="row"><%= link_to "Destroy", navbar, data: { turbo_method: :delete, turbo_confirm: "Estas seguro?" } %></td>
       </tr>
     <% end %>

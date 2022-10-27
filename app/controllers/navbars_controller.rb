@@ -1,6 +1,10 @@
 class NavbarsController < ApplicationController
   before_action :set_navbar, only: %i[ show edit update destroy ]
 
+  def navbar
+    @navbars = Navbar.all
+  end
+
   # GET /navbars or /navbars.json
   def index
     @navbars = Navbar.all
