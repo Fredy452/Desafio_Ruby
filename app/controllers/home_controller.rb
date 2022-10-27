@@ -5,5 +5,6 @@ class HomeController < ApplicationController
     @posts = Post.all
     @post = Post.last
     @navbars = Navbar.all
+    @products = Product.all
   end
 end
