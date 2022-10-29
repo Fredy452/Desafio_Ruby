@@ -37,29 +37,10 @@
     </div>
   </nav>
 
-  <!-- <div class="media">
-  <div class="media-left">
-  <img <%= link_to image_tag(@post.image, style:"width:50px", class:"media-object"), @post.image %>
-</div>
-<div class="media-body">
-  <h4 class="media-heading"><%= @post.title %></h4>
-  <p><%= @post.content %></p>
-</div>
-</div> -->
-
-<!-- Media object -->
-<!-- <div class="d-flex">
-  <div class="flex-shrink-0">
-    <%= link_to image_tag(@post.image, style:"width:150px", class:"media-object", alt:"@posts.title"), @post.image %>
-  </div>
-  <div class="flex-grow-1 ms-3">
-    <%= @post.content %>
-  </div>
-</div> -->
 <!-- Media object -->
 <div class="d-flex">
   <!-- Image -->
-  <%= link_to image_tag(@post.image, style:"width: 120px; height: 120px;", class:"media-object", alt:"@posts.title"), @post.image %>
+  <%= link_to image_tag(@post.image, style:"width: 120px; height: 120px; margin: 10px;", class:"media-object", alt:"@posts.title"), @post.image %>
   <!-- Body -->
   <div>
     <h5 class="fw-bold">
@@ -79,7 +60,7 @@
     <div class="card-body">
       <h5 class="card-title"><%=product.title %></h5>
       <p class="col-2 text-truncate"><%=product.description %></p>
-      <a href="#" class=" btn btn-primary">Go somewhere</a>
+      <a href="#" class=" btn btn-primary">Ver más...</a>
     </div>
   </div>
   <% end %>
